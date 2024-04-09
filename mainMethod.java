@@ -4,11 +4,11 @@ public class mainMethod {
         //Create a new memory simulator
         BasicMemorySimulator memorySimulator = new BasicMemorySimulator(1000);
         //Example 1
-        Process process1 = new Process(100, 0, 1);
+        Process process1 = new Process(100, 0, 0, 1);
         //Example 2
-        Process process2 = new Process(200, 0, 2);
+        Process process2 = new Process(200, 0, 0, 2);
         //Example 3
-        Process process3 = new Process(300, 0, 3);
+        Process process3 = new Process(300, 0, 0, 3);
         //The location has not been set yet as they will be allocated a location within the memory simulator
         //This is also where we will allow the user to choose which algorithm they want to use
         //Add the processes to the memory simulator
@@ -21,7 +21,29 @@ public class mainMethod {
         System.out.println(process2.printProcess());
         System.out.println(process3.printProcess());
         //This needs to be automated in another loop or perhaps in a list
+
+
     }
     
+    
+    //Choosing the algorithm
+    public void chooseAlgorithm(int algorithm) {
+        switch (algorithm) {
+            case 1:
+                // Algorithm firstFit = new FirstFit();
+                break;
+            case 2:
+                // Algorithm bestFit = new BestFit();
+                break;
+            case 3:
+                // Algorithm worstFit = new WorstFit();
+                break;
+            case 4:
+                // Algorithm nextFit = new NextFit();
+                break;
+            default:
+                System.out.println("Invalid algorithm");
+        }
+    }
 }
 

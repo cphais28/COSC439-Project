@@ -2,14 +2,16 @@ public class Process {
     //Set process size
     private int processSize;
     //Set process location
-    private int location;
+    private int startLocation;
+    private int endLocation;
     //Set Process ID
     private int processID;
 
     //Constructor
-    public Process(int processSize, int location, int processID) {
+    public Process(int processSize, int startLocation, int endLocation , int processID) {
         this.processSize = processSize;
-        this.location = location;
+        this.startLocation = startLocation;
+        this.endLocation = endLocation;
         this.processID = processID;
     }
 
@@ -22,12 +24,20 @@ public class Process {
         this.processSize = processSize;
     }
 
-    public int getLocation() {
-        return location;
+    public int getStartLocation() {
+        return startLocation;
     }
 
-    public void setLocation(int location) {
-        this.location = location;
+    public void setStartLocation(int startLocation) {
+        this.startLocation = startLocation;
+    }
+
+    public int getEndLocation() {
+        return endLocation;
+    }
+
+    public void setEndLocation(int endLocation) {
+        this.endLocation = endLocation;
     }
 
     public int getProcessID() {
@@ -40,7 +50,7 @@ public class Process {
 
     //Prints out the process
     public String printProcess() {
-        return "Process ID: " + processID + " Process Size: " + processSize + " Location: " + location;
+        return "Process ID: " + processID + " Process Size: " + processSize + " Location: " + startLocation + " End Location: " + endLocation;
     }
     
 }

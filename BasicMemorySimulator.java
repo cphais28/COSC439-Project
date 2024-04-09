@@ -30,9 +30,18 @@ public class BasicMemorySimulator {
         memoryBlocks.remove(memoryBlock);
     }
 
-    // //Add process
-    // public void addProcess(Process process) {
-    //     processes.add(process);
-    // }
+    //Print out the memory blocks
+    public void printMemoryBlocks() {
+        for (MemoryBlock memoryBlock : memoryBlocks) {
+            System.out.println(memoryBlock.getMemorySize());
+        }
+    }
+    
+    //Print out the processes
+    public void printProcesses() {
+        for (Process process : processes) {
+            System.out.println(process.getProcessSize());
+        }
+    }
 
 }
