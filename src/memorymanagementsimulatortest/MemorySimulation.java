@@ -7,6 +7,7 @@ package memorymanagementsimulatortest;
 /**
  *
  * @author mikej
+ * used ChatGPT 4 for creation
  */
 import java.util.Scanner;
 
